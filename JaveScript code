@@ -1,0 +1,14 @@
+function tribonacci(signature,n){
+  let input = signature;
+  let arr = [signature[0], signature[1], signature[2]];
+  if (n==0) {return arr=[]}
+  if (n==1) {return arr=[signature[0]]};
+    for (let i = 2; i < n-1; i++) {
+      let one = arr[i];
+      let two = arr[i-1];
+      let three = arr[i-2];
+      let sum = one+two+three;
+      arr.push(sum); 
+    }
+  return arr;
+}
